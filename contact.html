@@ -13,7 +13,7 @@
 
 
     <body id ="contact" onLoad = "disableButton(true)" style ="height: 1500px">
-        <div id="container">
+        <div id="container-fluid">
             <header>
                 <div class="main-header">
 
@@ -63,25 +63,32 @@
                             </div>
                         </div>
 
-                        <form class = "form-group" action="/contact" method="post">  
+                        <form action="/contact" method="post">  
                         <fieldset>  
                             <legend>Contact Form</legend>
-                            <div class="textbox">
+                            <div class="form-group form-textbox">
                                 <label>Name:</label> 
                                 <input type="text" name="name" placeholder="John Doe">  
+                               </div>
+
+                            <div class = "form-group form-textbox">
                                 <label>Email:</label>  
                                 <input type="email" name="email" placeholder="johndoe@gmail.com"> 
+                            </div>
+
+                            <div class = "form-group form-textbox">
                                 <label>Phone:</label>
                                 <input type="text" name="phone" placeholder="xxx-xxx-xxxx"> 
+                            
                             </div>
                             
-                            <div class="radios badge-warning">
+                            <div class="form-group form-radios badge-warning">
                                 <label>How should we contact you?</label>  
                                 <input type="radio" name="contact" value="email" checked>Email 
                                 <input type="radio" name="contact" value="phone">Phone
                             </div>
 
-                            <div class="selectmenu">
+                            <div class="form-group form-selectmenu">
                                 <label class = "badge-danger">Which Cliff are you inquiring?</label>  
                                 <select>
                                     <option>West Cliff</option>
@@ -91,8 +98,9 @@
                                 </select>
                             </div>
                             
-                            <div class="commentbox">
-                                <label>How did you hear about us:</label>  
+                            <div class="form-group form-commentbox">
+                                <label>How did you hear about us:</label> 
+                                <br> 
                                 <textarea></textarea>
                             </div>
 
